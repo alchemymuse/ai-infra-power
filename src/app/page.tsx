@@ -4,10 +4,38 @@ import { useState, FormEvent } from "react";
 
 export default function Home() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: formData.get("firstName"),
+          lastName: formData.get("lastName"),
+          organization: formData.get("organization"),
+          email: formData.get("email"),
+          interest: formData.get("interest"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -284,17 +312,18 @@ export default function Home() {
                 <div className="f-2col">
                   <div className="f-row">
                     <label>First Name</label>
-                    <input type="text" placeholder="John" required />
+                    <input name="firstName" type="text" placeholder="John" required />
                   </div>
                   <div className="f-row">
                     <label>Last Name</label>
-                    <input type="text" placeholder="Smith" required />
+                    <input name="lastName" type="text" placeholder="Smith" required />
                   </div>
                 </div>
 
                 <div className="f-row">
                   <label>Organization</label>
                   <input
+                    name="organization"
                     type="text"
                     placeholder="Fund / Family Office / Company"
                   />
@@ -303,6 +332,7 @@ export default function Home() {
                 <div className="f-row">
                   <label>Email Address</label>
                   <input
+                    name="email"
                     type="email"
                     placeholder="you@organization.com"
                     required
@@ -311,7 +341,7 @@ export default function Home() {
 
                 <div className="f-row">
                   <label>I am inquiring about</label>
-                  <select required defaultValue="">
+                  <select name="interest" required defaultValue="">
                     <option value="" disabled>
                       Select your interest...
                     </option>
@@ -325,7 +355,7 @@ export default function Home() {
 
                 <div className="f-row">
                   <label>Message (optional)</label>
-                  <textarea placeholder="Brief description of your situation or any specific questions..." />
+                  <textarea name="message" placeholder="Brief description of your situation or any specific questions..." />
                 </div>
 
                 <div className="nda-row">
@@ -342,8 +372,14 @@ export default function Home() {
                   </label>
                 </div>
 
-                <button type="submit" className="f-submit">
-                  Submit Request
+                {error && (
+                  <div style={{ color: "#ef4444", fontSize: "0.9rem", marginBottom: "1rem" }}>
+                    {error}
+                  </div>
+                )}
+
+                <button type="submit" className="f-submit" disabled={sending}>
+                  {sending ? "Sending..." : "Submit Request"}
                 </button>
               </form>
             ) : (
