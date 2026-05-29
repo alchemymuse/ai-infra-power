@@ -201,16 +201,16 @@ export default function Home() {
                 className="member-initial"
                 style={{ background: "rgba(200,146,42,.15)", color: "var(--gold)" }}
               >
-                J
+                V
               </div>
-              <div className="member-name">James</div>
+              <div className="member-name">Victoria</div>
               <div className="member-title" style={{ color: "var(--gold)" }}>
-                Managing Partner &middot; Finance &amp; Risk
+                Managing Partner &middot; Business Development &amp; Offtake
               </div>
               <p className="member-desc">
-                Responsible for fund governance, LP relationships, financial modeling,
-                and risk control frameworks. Leads capital markets strategy and
-                investor relations.
+                Leads business development, strategic partnerships, and offtake
+                agreements. Drives deal origination, client relationships, and
+                revenue growth across all fund verticals.
               </p>
             </div>
             <div className="member">
@@ -250,9 +250,17 @@ export default function Home() {
           </div>
 
           <div className="advisor-note">
-            <strong>Advisory:</strong> Compute Exchange (Carmen Li) &mdash; real-time
-            compute price index &nbsp;&middot;&nbsp; Regional legal counsel
-            &nbsp;&middot;&nbsp; Energy engineering consultants
+            <strong>Advisory &amp; Risk Oversight:</strong> Our strategic direction
+            is guided by an Advisory and Risk Committee of elite Wall Street
+            institutional bankers specializing in compliance, governance, and
+            structured finance. Supported by top-tier regional legal experts and
+            specialized energy consultants, the committee maintains a world-class
+            risk management standard.
+            <br /><br />
+            We actively hedge macro-level exposure by continuously referring and
+            integrating real-time market intelligence from the Compute Exchange
+            index, tracking pricing trends to proactively safeguard our AI
+            infrastructure investments.
           </div>
         </div>
       </section>
@@ -279,9 +287,7 @@ export default function Home() {
               <div className="detail-dot" style={{ background: "var(--gold)" }} />
               <div>
                 <div className="detail-label">Managing Partner</div>
-                <div className="detail-val">
-                  James &nbsp;&middot;&nbsp; +1 646 340 6522
-                </div>
+                <div className="detail-val">Victoria</div>
               </div>
             </div>
             <div className="contact-detail">
@@ -289,7 +295,7 @@ export default function Home() {
               <div>
                 <div className="detail-label">Focus Region</div>
                 <div className="detail-val">
-                  Texas ERCOT &nbsp;&middot;&nbsp; DFW + Houston&ndash;SA
+                  Texas ERCOT &nbsp;&middot;&nbsp; DFW + Houston&ndash;SA &nbsp;&middot;&nbsp; New York
                 </div>
               </div>
             </div>
