@@ -111,9 +111,6 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="hero-kicker">
-          Infrastructure Alpha Fund &middot; Confidential &middot; For Qualified Parties Only
-        </div>
       </section>
 
       {/* PROBLEM */}
