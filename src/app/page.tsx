@@ -63,27 +63,52 @@ export default function Home() {
 
       {/* HERO */}
       <section id="hero">
-        <div className="hero-inner">
-          <div className="hero-eyebrow">
-            <span className="eyebrow-line" />
-            Texas &middot; ERCOT &middot; Powered Land
+        <div className="hero-layout">
+          <div className="hero-inner">
+            <div className="hero-eyebrow">
+              <span className="eyebrow-line" />
+              Texas &middot; ERCOT &middot; Powered Land
+            </div>
+            <h1 className="hero-title">
+              The <span className="accent">Digital Land</span>
+              <br />
+              Dividend of the
+              <br />
+              <span className="under">AI Era</span>
+            </h1>
+            <div className="hero-divider" />
+            <p className="hero-body">
+              We acquire, upgrade, and trade AI-grade Powered Land &mdash; converting
+              bitcoin mining sites and raw land into grid-connected infrastructure
+              assets. Built for the energy-scarce era.
+            </p>
+            <div className="cta-row">
+              <a href="#contact" className="cta-primary">Request a Meeting</a>
+              <a href="#audiences" className="cta-ghost">Explore what we do &rarr;</a>
+            </div>
           </div>
-          <h1 className="hero-title">
-            The <span className="accent">Digital Land</span>
-            <br />
-            Dividend of the
-            <br />
-            <span className="under">AI Era</span>
-          </h1>
-          <div className="hero-divider" />
-          <p className="hero-body">
-            We acquire, upgrade, and trade AI-grade Powered Land &mdash; converting
-            bitcoin mining sites and raw land into grid-connected infrastructure
-            assets. Built for the energy-scarce era.
-          </p>
-          <div className="cta-row">
-            <a href="#contact" className="cta-primary">Request a Meeting</a>
-            <a href="#audiences" className="cta-ghost">Explore what we do &rarr;</a>
+
+          <div className="hero-features">
+            <a href="/sites/available" className="hero-feature-card hf-now">
+              <div className="hf-icon">&#x26A1;</div>
+              <div className="hf-label">Available Now</div>
+              <h3 className="hf-title">Power Available Now</h3>
+              <p className="hf-desc">
+                Energized, grid-connected sites ready for immediate deployment.
+                25MW+ capacity online today.
+              </p>
+              <span className="hf-link">View Sites &rarr;</span>
+            </a>
+            <a href="/sites/future" className="hero-feature-card hf-future">
+              <div className="hf-icon">&#x1F50C;</div>
+              <div className="hf-label">Coming Soon</div>
+              <h3 className="hf-title">Future Power Available</h3>
+              <p className="hf-desc">
+                Sites under development with power capacity in the pipeline.
+                Secure your position early.
+              </p>
+              <span className="hf-link">View Pipeline &rarr;</span>
+            </a>
           </div>
         </div>
         <div className="hero-kicker">

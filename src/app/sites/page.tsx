@@ -24,94 +24,47 @@ export default function SitesPage() {
         </div>
       </nav>
 
-      {/* SITES FOR SALE */}
+      {/* SITES INDEX */}
       <section id="sites" style={{ paddingTop: "140px" }}>
         <div className="sites-inner">
-          <div className="sh-eyebrow">Available Now</div>
+          <div className="sh-eyebrow">Infrastructure Portfolio</div>
           <h2 className="sh-title">Sites for Sale</h2>
           <p className="sites-intro">
-            Energized, grid-connected infrastructure sites ready for immediate
-            deployment. Each listing has been vetted for power reliability,
-            connectivity, and proximity to critical supply corridors.
+            AI-grade powered land across the Texas ERCOT market. Browse
+            sites that are energized and ready today, or explore our
+            development pipeline for future capacity.
           </p>
 
-          <div className="site-card">
-            <div className="site-card-header">
-              <div className="site-badge">Featured Listing</div>
-              <h3 className="site-card-title">
-                Texas ERCOT &mdash; 40-Acre Powered Site
-              </h3>
-              <p className="site-card-tagline">
-                40 Acres &bull; 25MW Available Now &bull; Natural Gas Pipeline
-                &bull; Fiber Connectivity &bull; Water Access &bull; 90 Minutes
-                from Houston
+          <div className="sites-hub">
+            <a href="/sites/available" className="sites-hub-card shc-now">
+              <div className="shc-icon">&#x26A1;</div>
+              <div className="shc-badge" style={{ color: "var(--gold)", background: "rgba(200,146,42,.12)", borderColor: "rgba(200,146,42,.25)" }}>
+                Available Now
+              </div>
+              <h3 className="shc-title">Power Available Now</h3>
+              <p className="shc-desc">
+                Energized, grid-connected sites ready for immediate deployment.
+                25MW+ capacity online today with full infrastructure in place.
               </p>
-            </div>
+              <span className="shc-link" style={{ color: "var(--gold)" }}>
+                View Available Sites &rarr;
+              </span>
+            </a>
 
-            <div className="site-card-body">
-              <div className="site-table-wrap">
-                <table className="site-table">
-                  <thead>
-                    <tr>
-                      <th>Infrastructure Asset</th>
-                      <th>Details</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Site Size</td>
-                      <td>40 Acres</td>
-                    </tr>
-                    <tr>
-                      <td>Available Capacity</td>
-                      <td>25 MW immediately available</td>
-                    </tr>
-                    <tr>
-                      <td>Grid Status</td>
-                      <td>Energized and operational</td>
-                    </tr>
-                    <tr>
-                      <td>Natural Gas Infrastructure</td>
-                      <td>
-                        Natural gas pipeline available on or near the site
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Connectivity</td>
-                      <td>Fiber internet access</td>
-                    </tr>
-                    <tr>
-                      <td>Water Access</td>
-                      <td>Available on-site</td>
-                    </tr>
-                    <tr>
-                      <td>Location</td>
-                      <td>Approximately 90 minutes from Houston</td>
-                    </tr>
-                    <tr>
-                      <td>Use Cases</td>
-                      <td>
-                        AI Data Centers, HPC, Cloud Infrastructure, Digital
-                        Asset Computing
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Deployment Timeline</td>
-                      <td>Accelerated compared to greenfield developments</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <a href="/sites/future" className="sites-hub-card shc-future">
+              <div className="shc-icon">&#x1F50C;</div>
+              <div className="shc-badge" style={{ color: "var(--wire2)", background: "rgba(11,163,196,.12)", borderColor: "rgba(11,163,196,.25)" }}>
+                Pipeline
               </div>
-
-              <div className="site-cta-row">
-                <a href="/#contact" className="cta-primary">
-                  Request Site Details
-                </a>
-                <a href="/#contact" className="cta-ghost">
-                  Schedule a Site Visit &rarr;
-                </a>
-              </div>
-            </div>
+              <h3 className="shc-title">Future Power Available</h3>
+              <p className="shc-desc">
+                Sites under development with 50&ndash;200MW in the ERCOT
+                interconnection queue. Secure early access at pre-development pricing.
+              </p>
+              <span className="shc-link" style={{ color: "var(--wire2)" }}>
+                View Pipeline Sites &rarr;
+              </span>
+            </a>
           </div>
         </div>
       </section>
