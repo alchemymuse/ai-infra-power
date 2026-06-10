@@ -131,6 +131,38 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .card-cta:hover{gap:.85rem}
 .card-cta .arrow{font-size:1rem}
 
+/* SITES FOR SALE */
+#sites{position:relative;z-index:1;padding:100px 4rem;background:var(--ink2);
+  border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.sites-inner{max-width:1200px;margin:0 auto}
+.sites-intro{font-size:1.05rem;color:var(--slate);line-height:1.75;font-weight:300;
+  max-width:640px;margin-top:1.25rem;margin-bottom:3rem}
+
+.site-card{background:var(--ink);border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden}
+.site-card-header{padding:2.5rem 2.5rem 2rem;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  background:linear-gradient(135deg,rgba(200,146,42,.06),rgba(11,163,196,.04))}
+.site-badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--gold);background:rgba(200,146,42,.12);
+  border:1px solid rgba(200,146,42,.25);border-radius:3px;padding:.35rem .85rem;margin-bottom:1rem}
+.site-card-title{font-family:var(--font-serif);font-size:1.8rem;font-weight:700;
+  color:var(--white);margin-bottom:.75rem;line-height:1.25}
+.site-card-tagline{font-size:.95rem;color:var(--wire2);font-weight:400;line-height:1.6}
+
+.site-card-body{padding:2.5rem}
+.site-table-wrap{border:1px solid rgba(255,255,255,.08);border-radius:6px;overflow:hidden;margin-bottom:2rem}
+.site-table{width:100%;border-collapse:collapse}
+.site-table thead th{text-align:left;padding:.85rem 1.25rem;font-size:.78rem;font-weight:600;
+  letter-spacing:1px;text-transform:uppercase;color:var(--slate);
+  background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.08)}
+.site-table tbody td{padding:.85rem 1.25rem;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}
+.site-table tbody tr:last-child td{border-bottom:0}
+.site-table tbody td:first-child{color:var(--mist);font-weight:500;width:240px}
+.site-table tbody td:last-child{color:var(--white);font-weight:300}
+.site-table tbody tr:hover{background:rgba(255,255,255,.02)}
+
+.site-cta-row{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center}
+
 /* TEAM */
 #team{position:relative;z-index:1;padding:100px 4rem;background:var(--ink2);
   border-top:1px solid rgba(255,255,255,.06)}
@@ -231,7 +263,7 @@ footer{position:relative;z-index:1;background:var(--ink);
 @media(max-width:960px){
   nav{padding:0 2rem}
   .nav-links{display:none}
-  #hero,#problem,#audiences,#team,#contact,footer{padding-left:2rem;padding-right:2rem}
+  #hero,#problem,#audiences,#sites,#team,#contact,footer{padding-left:2rem;padding-right:2rem}
   .problem-inner{grid-template-columns:1fr;gap:2.5rem}
   .p-divider{display:none}
   .p-block{padding:0}
@@ -245,4 +277,6 @@ footer{position:relative;z-index:1;background:var(--ink);
 @media(max-width:600px){
   .f-2col{grid-template-columns:1fr}
   .hero-title{font-size:2.8rem}
+  .site-table tbody td:first-child{width:auto}
+  .site-card-header,.site-card-body{padding:1.5rem}
 }
